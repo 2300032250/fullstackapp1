@@ -16,7 +16,7 @@ function App() {
   const handleChange = (e) => {
     setProduct({ ...product, [e.target.name]: e.target.value });
   };
-const BASE_URL = 'http://52.55.27.136:9090/springapp1';
+const BASE_URL = 'http://18.209.35.107:9090/springapp1';
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -49,7 +49,7 @@ const BASE_URL = 'http://52.55.27.136:9090/springapp1';
  
   const deleteProduct = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
-      await axios.delete(`http://52.55.27.136:9090/springapp1/delete/${id}`);
+      await axios.delete(`http://18.209.35.107:9090/springapp1/delete/${id}`);
       alert('Delete successful');
       fetchProducts();
     }
